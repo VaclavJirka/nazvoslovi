@@ -1,0 +1,12 @@
+.env
+nazvoslovi.sqlite3
+import_data.py
+*.log
+*.pot
+*.pyc
+__pycache__
+node_modules
+.DS_*
+logs
+**/*.backup.*
+**/*.back.*
