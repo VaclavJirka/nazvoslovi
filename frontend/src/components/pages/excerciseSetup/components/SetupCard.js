@@ -21,6 +21,9 @@ function SetupCard({
           }
         }}
       >
+        <h3 className="setup-card-title">
+          {elType === "groups" ? "Skupiny" : "Prvky"}
+        </h3>
         <input
           className="setup-search-box"
           placeholder="Hledat..."

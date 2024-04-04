@@ -34,6 +34,8 @@ function ExcerciseSetup() {
   useEffect(() => {
     if (allGroups) {
       setGroupsSet(new Set(groups.map((item) => item.name)));
+    } else {
+      setGroupsSet(new Set());
     }
   }, [allGroups]);
 
@@ -44,6 +46,8 @@ function ExcerciseSetup() {
   useEffect(() => {
     if (allElements) {
       setElementsSet(new Set(elements.map((item) => item.name)));
+    } else {
+      setElementsSet(new Set());
     }
   }, [allElements]);
 

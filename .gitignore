@@ -10,3 +10,5 @@ node_modules
 logs
 **/*.backup.*
 **/*.back.*
+frontend/static/frontend/main.js
+frontend/static/frontend/main.js.map
