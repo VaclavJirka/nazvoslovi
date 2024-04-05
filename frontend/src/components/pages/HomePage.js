@@ -11,7 +11,7 @@ function HomePage() {
         procvič si více než 2000 sloučenin. Staň se mistrem názvosloví! 🧪
       </p>
       <Link to="/procvicovani">
-        <button className="start-button" id="go-to-practice">
+        <button className="blue-glow-button" id="go-to-practice">
           Procvičovat
         </button>
       </Link>

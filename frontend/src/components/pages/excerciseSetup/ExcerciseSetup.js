@@ -139,7 +139,7 @@ function ExcerciseSetup() {
         </fieldset>
       </div>
       <button
-        className="normal-start-button"
+        className="blue-glow-button"
         id="excercise-start-button"
         type="submit"
       >

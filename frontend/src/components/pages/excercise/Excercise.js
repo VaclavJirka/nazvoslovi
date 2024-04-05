@@ -158,7 +158,7 @@ function Excercise() {
             />
             <div id="excercise-buttons">
               <button
-                className="normal-start-button"
+                className="blue-glow-button"
                 id="excercise-next"
                 onClick={handleCheck}
                 type="button"
@@ -166,7 +166,7 @@ function Excercise() {
                 {dontKnow ? "Další" : "Zkontrolovat"}
               </button>
               <button
-                className="normal-start-button"
+                className="grey-button"
                 id="excercise-skip"
                 onClick={handleDontKnow}
                 type="button"

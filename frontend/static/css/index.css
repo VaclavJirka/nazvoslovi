@@ -36,6 +36,18 @@ h2 {
   flex-direction: column;
 }
 
+/* specifics */
+
+.blue-glow-button {
+  background-color: mediumblue;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 700;
+  border-style: none;
+  border-radius: 999px;
+  box-shadow: 0px 0px 20px mediumblue;
+}
+
 /* navlist begins */
 
 nav {
@@ -145,37 +157,21 @@ nav ul li a {
 }
 
 #go-to-practice {
-  font-size: 1.2em;
-  font-weight: 700;
-  border-radius: 999px;
-  border-style: none;
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 25px;
   padding-right: 25px;
   margin: 32px;
-  background-color: mediumblue;
-  color: white;
-  box-shadow: 0px 0px 20px mediumblue;
 }
 
 /* setup */
 
-.normal-start-button {
-  font-size: 1.2em;
-  font-weight: 700;
-  border-radius: 999px;
-  border-style: none;
+#excercise-start-button {
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 20px;
   padding-right: 20px;
-}
-
-#excercise-start-button {
-  background-color: mediumblue;
-  color: white;
-  box-shadow: 0px 0px 20px mediumblue;
+  margin: 12px;
 }
 
 .setup-header {
@@ -322,16 +318,28 @@ fieldset {
 }
 
 #excercise-next {
-  background-color: mediumblue;
-  color: white;
-  box-shadow: 0px 0px 20px mediumblue;
-  margin: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 12px;
+}
+
+.grey-button {
+  border-style: none;
+  border-radius: 999px;
+  background-color: lightgrey;
+  color: black;
+  font-size: 1em;
+  font-weight: 600;
 }
 
 #excercise-skip {
-  background-color: lightgrey;
-  color: black;
-  margin: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 12px;
 }
 
 .links i {
@@ -393,8 +401,12 @@ footer {
     font-size: 1.4rem;
     margin: 8px;
   }
-  #go-to-practice {
+
+  .blue-glow-button {
     font-size: 1em;
+  }
+
+  #go-to-practice {
     padding-top: 16px;
     padding-bottom: 16px;
     padding-left: 20px;
