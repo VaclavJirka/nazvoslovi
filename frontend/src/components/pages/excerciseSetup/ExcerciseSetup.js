@@ -138,17 +138,15 @@ function ExcerciseSetup() {
   };
 
   return (
-    <form className="content" id="content-excercise-setup" onSubmit={onSubmit}>
-      <h2 className="setup-header">Nastavení procvičování</h2>
+    <form className="content" id="excercise-setup-form" onSubmit={onSubmit}>
+      <h2 className="excercise-setup-header">Nastavení procvičování</h2>
       <SetupType
-        fieldsetClass="setup-type"
         excerciseType={excerciseType}
         handleExcerciseTypeChange={handleExcerciseTypeChange}
       />
       <div className="setup-div">
-        <fieldset className="setup-set-div">
+        <fieldset className="main-setup-field-set">
           <SetupAllSome
-            fieldsetClass="setup-radio-form"
             elType="groups"
             allState={allGroups}
             handleChange={handleAllGroupsChange}
@@ -168,9 +166,8 @@ function ExcerciseSetup() {
             handleTypeChange={handleGroupChange}
           />
         </fieldset>
-        <fieldset className="setup-set-div">
+        <fieldset className="main-setup-field-set">
           <SetupAllSome
-            fieldsetClass="setup-radio-form"
             elType="elements"
             allState={allElements}
             handleChange={handleAllElementsChange}

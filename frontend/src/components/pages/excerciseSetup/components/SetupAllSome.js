@@ -1,17 +1,10 @@
 import React from "react";
 import SetupRadioOption from "./SetupRadioOption";
 
-function SetupAllSome({
-  fieldsetClass,
-  elType,
-  allState,
-  handleChange,
-  title,
-  id,
-}) {
+function SetupAllSome({ elType, allState, handleChange, title, id }) {
   return (
     <>
-      <fieldset className={fieldsetClass}>
+      <fieldset className="setup-all-some">
         <SetupRadioOption
           divClass="setup-radio-form-option"
           elName={`all-${elType}`}

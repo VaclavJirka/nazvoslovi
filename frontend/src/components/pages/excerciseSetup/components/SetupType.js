@@ -1,16 +1,12 @@
 import React from "react";
 import SetupRadioOption from "./SetupRadioOption";
 
-function SetupType({
-  fieldsetClass,
-  excerciseType,
-  handleExcerciseTypeChange,
-}) {
+function SetupType({ excerciseType, handleExcerciseTypeChange }) {
   return (
     <>
-      <fieldset className={fieldsetClass}>
+      <fieldset className="setup-type">
         <SetupRadioOption
-          divClass=""
+          divClass="setup-radio-form-option"
           elName="vzorce"
           id="setup-radio-form-option-1"
           value="vzorce"
@@ -19,7 +15,7 @@ function SetupType({
           title="Vzorce"
         ></SetupRadioOption>
         <SetupRadioOption
-          divClass=""
+          divClass="setup-radio-form-option"
           elName="nazvy"
           id="setup-radio-form-option-2"
           value="nazvy"
