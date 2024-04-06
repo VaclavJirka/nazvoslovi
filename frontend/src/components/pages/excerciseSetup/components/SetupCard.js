@@ -2,18 +2,20 @@ import React from "react";
 
 function SetupCard({
   allState,
+  error,
   handleAllChange,
   elType,
   setSearch,
   typeSearch,
   dataType,
   typeSet,
+  deleteSelected,
   handleTypeChange,
 }) {
   return (
     <>
       <fieldset
-        className="setup-card"
+        className={`setup-card${error ? "-error" : ""}`}
         disabled={allState ? true : false}
         onClick={() => {
           if (allState) {
@@ -30,6 +32,17 @@ function SetupCard({
           name={`search-${elType}`}
           onChange={(e) => setSearch(e.target.value)}
         />
+        {error && (
+          <h5 className="setup-card-error-title">
+            Vyberte alespoň jednu možnost
+          </h5>
+        )}
+        <button
+          className="setup-delete-selected"
+          onClick={() => deleteSelected(elType)}
+        >
+          Vymazat vše
+        </button>
         <ul className="setup-items-list">
           {dataType
             .filter((item) => {
