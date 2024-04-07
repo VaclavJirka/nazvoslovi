@@ -2,11 +2,14 @@ import React, { useEffect, useState, useCallback } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import fetchCompounds from "../../api/api";
 import { useSpring, animated } from "@react-spring/web";
+import NoCompounds from "./components/NoCompounds";
+import ExcerciseError from "./components/ExcerciseError";
 
 function Excercise() {
   const location = useLocation();
   const navigate = useNavigate();
   const VZORCE = "vzorce";
+  const count = 10; // pak vymazat
   const { EXCERCISE_TYPE, wantedGroups, wantedElements } = location.state || {};
   const [compounds, setCompounds] = useState([]);
   const [availableCompounds, setAvailableCompounds] = useState(null);
@@ -116,7 +119,7 @@ function Excercise() {
   return (
     <>
       {!error ? (
-        compounds.length > 0 ? (
+        count > 0 ? ( // pak nahradit compouds.length > 0
           <div className="content" id="content-excercise">
             <h2 className="task">
               {
@@ -176,9 +179,11 @@ function Excercise() {
               </button>
             </div>
           </div>
+        ) : count === 0 ? (
+          <NoCompounds />
         ) : null
       ) : (
-        <p>Problem with fetching data. Trying to reconnect.</p>
+        <ExcerciseError error={error} />
       )}
     </>
   );
