@@ -1,5 +1,6 @@
 import React from "react";
 import AboutCard from "./components/AboutCard";
+import OtherContributors from "./components/OtherContributors";
 
 function About() {
   return (
@@ -47,6 +48,7 @@ function About() {
           },
         ]}
       />
+      <OtherContributors />
     </div>
   );
 }

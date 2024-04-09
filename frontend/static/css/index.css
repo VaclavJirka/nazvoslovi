@@ -13,6 +13,15 @@ h2 {
   font-size: 1.8rem;
 }
 
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
+
+input[type="radio"] {
+  transform: scale(1.2);
+}
+
 #main {
   position: fixed;
   width: 100%;
@@ -178,6 +187,7 @@ nav ul li a {
 
 .radio-button-label {
   font-weight: 600;
+  margin-left: 4px;
 }
 
 /* setup */
@@ -317,6 +327,7 @@ nav ul li a {
 .setup-card-item-row {
   display: flex;
   flex-direction: row;
+  align-items: center;
   padding-left: 8px;
   padding-right: 8px;
 }
@@ -478,6 +489,23 @@ nav ul li a {
 .about-paragraph {
   font-size: 1.3rem;
 }
+
+.other-contributors-item-header {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: mediumblue;
+}
+
+.other-contributors-item-text {
+  font-size: 1.2rem;
+}
+
+.other-contributors-item-link {
+  font-size: 1.3rem;
+  display: inline;
+  margin-left: 4px;
+  color: black;
+}
 /* footer style */
 
 footer {
@@ -558,6 +586,11 @@ footer {
 @media (max-width: 400px) {
   html {
     font-size: 14px;
+  }
+
+  input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
   }
 }
 
