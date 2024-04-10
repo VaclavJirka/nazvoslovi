@@ -4,7 +4,7 @@ import OtherContributors from "./components/OtherContributors";
 
 function About() {
   return (
-    <div className="content" id="content-about">
+    <div className="content" id="about">
       <AboutCard
         id="about-nazvoslovi"
         header={"nazvoslovi.eu"}

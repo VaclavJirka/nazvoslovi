@@ -1,9 +1,11 @@
 import React, { useEffect, useState, useCallback } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import fetchCompounds from "../../api/api";
-import { useSpring, animated } from "@react-spring/web";
+import { useSpring } from "@react-spring/web";
 import NoCompounds from "./components/NoCompounds";
 import ExcerciseError from "./components/ExcerciseError";
+import ExcerciseInput from "./components/ExcerciseInput";
+import ExcerciseButtons from "./components/ExcerciseButtons";
 
 function Excercise() {
   const location = useLocation();
@@ -88,26 +90,24 @@ function Excercise() {
     if (dontKnow) {
       setDontKnow(false);
       setAnswer("");
-      setCompounds(compounds.slice(1));
     } else {
       if (EXCERCISE_TYPE === VZORCE) {
         if (compounds[1].name === answer) {
           setWrong(false);
-          setCompounds(compounds.slice(1));
-          setUsedIds([...usedIds, compounds[1].id]);
+          setUsedIds([...usedIds, compounds[0].id]);
         } else {
           setWrong(true);
         }
       } else {
         if (compounds[1].formula === answer) {
           setWrong(false);
-          setCompounds(compounds.slice(1));
-          setUsedIds([...usedIds, compounds[1].id]);
+          setUsedIds([...usedIds, compounds[0].id]);
         } else {
           setWrong(true);
         }
       }
     }
+    setCompounds(compounds.slice(1));
   };
 
   // handle the dont know button
@@ -119,67 +119,34 @@ function Excercise() {
   return (
     <>
       {!error ? (
-        count > 0 ? ( // pak nahradit compouds.length > 0
-          <div className="content" id="content-excercise">
+        compounds.length > 0 ? (
+          <div className="content" id="excercise">
+            <h4 className="task-label">Zadejte:</h4>
             <h2 className="task">
               {
                 EXCERCISE_TYPE === VZORCE
                   ? "lol"
-                  : compounds[1]?.name /*podívat se na to číslo */
+                  : compounds[0]?.name /*podívat se na to číslo */
               }
             </h2>
-            <animated.input
-              id={wrong ? "excercise-entry-true" : "excercise-entry-true"}
-              className="excercise-entry"
-              placeholder="Zadejte vzorec.."
-              autoFocus
-              disabled={dontKnow ? true : false}
-              value={
-                dontKnow
-                  ? EXCERCISE_TYPE === VZORCE
-                    ? compounds[1]?.name
-                    : "lol"
-                  : answer
-                  ? answer
-                  : ""
-              }
-              onChange={handleAnswer}
-              onKeyDown={handleEnter}
-              style={{
-                transform: wrongAnimation
-                  .to({
-                    range: [0, 0.25, 0.35, 0.45, 0.55, 0.65, 0.75, 1],
-                    output: [0, 20, -20, 20, -20, 20, -20, 0],
-                  })
-                  .to(
-                    (wrongAnimation) =>
-                      `translate3d(${wrongAnimation}px, 0px, 0px)`
-                  ),
-                border: wrong ? "2px solid red" : "2px solid black",
-                backgroundColor: wrong ? "rgba(255, 0, 0, 0.2)" : "white",
-              }}
+            <ExcerciseInput
+              wrong={wrong}
+              dontKnow={dontKnow}
+              answer={answer}
+              handleAnswer={handleAnswer}
+              handleEnter={handleEnter}
+              wrongAnimation={wrongAnimation}
+              compounds={compounds}
+              VZORCE={VZORCE}
+              EXCERCISE_TYPE={EXCERCISE_TYPE}
             />
-            <div id="excercise-buttons">
-              <button
-                className="blue-glow-button"
-                id="excercise-next"
-                onClick={handleCheck}
-                type="button"
-              >
-                {dontKnow ? "Další" : "Zkontrolovat"}
-              </button>
-              <button
-                className="grey-button"
-                id="excercise-skip"
-                onClick={handleDontKnow}
-                type="button"
-                style={dontKnow ? { display: "none" } : null}
-              >
-                Nevím
-              </button>
-            </div>
+            <ExcerciseButtons
+              handleCheck={handleCheck}
+              handleDontKnow={handleDontKnow}
+              dontKnow={dontKnow}
+            />
           </div>
-        ) : count === 0 ? (
+        ) : count === 0 ? ( // tady se to musí vylepšit
           <NoCompounds />
         ) : null
       ) : (

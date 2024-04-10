@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function HomePage() {
   return (
-    <div className="content" id="home-div">
+    <div className="content" id="home">
       <h1 className="home-header">Procvič si názvosloví</h1>
       <p className="home-paragraph">
         Nejde ti názvosloví? Potřebuješ si procvičit názvosloví před písemkou?
