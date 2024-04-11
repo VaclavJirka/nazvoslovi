@@ -7,19 +7,19 @@ function SetupType({ excerciseType, handleExcerciseTypeChange }) {
       <fieldset className="setup-type">
         <SetupRadioOption
           divClass="setup-radio-form-option"
-          elName="vzorce"
+          elName="vzorec"
           id="setup-radio-form-option-1"
-          value="vzorce"
-          checked={excerciseType === "nazvy" ? false : true}
+          value="vzorec"
+          checked={excerciseType === "název" ? false : true}
           handleChange={handleExcerciseTypeChange}
           title="Vzorce"
         ></SetupRadioOption>
         <SetupRadioOption
           divClass="setup-radio-form-option"
-          elName="nazvy"
+          elName="název"
           id="setup-radio-form-option-2"
-          value="nazvy"
-          checked={excerciseType === "nazvy" ? true : false}
+          value="název"
+          checked={excerciseType === "název" ? true : false}
           handleChange={handleExcerciseTypeChange}
           title="Názvy"
         ></SetupRadioOption>

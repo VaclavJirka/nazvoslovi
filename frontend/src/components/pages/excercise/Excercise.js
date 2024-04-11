@@ -6,11 +6,12 @@ import NoCompounds from "./components/NoCompounds";
 import ExcerciseError from "./components/ExcerciseError";
 import ExcerciseInput from "./components/ExcerciseInput";
 import ExcerciseButtons from "./components/ExcerciseButtons";
+import LoadingCompounds from "./components/LoadingCompounds";
 
 function Excercise() {
   const location = useLocation();
   const navigate = useNavigate();
-  const VZORCE = "vzorce";
+  const VZOREC = "vzorec";
   const count = 10; // pak vymazat
   const { EXCERCISE_TYPE, wantedGroups, wantedElements } = location.state || {};
   const [compounds, setCompounds] = useState([]);
@@ -91,7 +92,7 @@ function Excercise() {
       setDontKnow(false);
       setAnswer("");
     } else {
-      if (EXCERCISE_TYPE === VZORCE) {
+      if (EXCERCISE_TYPE === VZOREC) {
         if (compounds[1].name === answer) {
           setWrong(false);
           setUsedIds([...usedIds, compounds[0].id]);
@@ -124,7 +125,7 @@ function Excercise() {
             <h4 className="task-label">Zadejte:</h4>
             <h2 className="task">
               {
-                EXCERCISE_TYPE === VZORCE
+                EXCERCISE_TYPE === VZOREC
                   ? "lol"
                   : compounds[0]?.name /*podívat se na to číslo */
               }
@@ -137,7 +138,7 @@ function Excercise() {
               handleEnter={handleEnter}
               wrongAnimation={wrongAnimation}
               compounds={compounds}
-              VZORCE={VZORCE}
+              VZOREC={VZOREC}
               EXCERCISE_TYPE={EXCERCISE_TYPE}
             />
             <ExcerciseButtons
@@ -148,7 +149,9 @@ function Excercise() {
           </div>
         ) : count === 0 ? ( // tady se to musí vylepšit
           <NoCompounds />
-        ) : null
+        ) : (
+          <LoadingCompounds />
+        )
       ) : (
         <ExcerciseError error={error} />
       )}

@@ -34,7 +34,7 @@ input[type="radio"] {
 #app {
   position: fixed;
   width: 100%;
-  min-width: 280px;
+  min-width: 270px;
   height: 100%;
   left: 0;
   top: 0;
@@ -65,7 +65,7 @@ fieldset {
 
 nav {
   margin: 16px;
-  z-index: 1;
+  z-index: 2;
 }
 
 .nav-list {
@@ -120,6 +120,7 @@ nav ul li a {
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
+  z-index: 1;
 }
 
 .overlay-menu {
@@ -143,6 +144,7 @@ nav ul li a {
 
 /* content section starts */
 .content {
+  z-index: 0;
   margin-top: 20px;
   margin-bottom: 30px;
   padding-left: 50px;
@@ -357,7 +359,21 @@ nav ul li a {
 
 /* excercise */
 #excercise {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#excercise-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.excercise-loading-header {
+  color: mediumblue;
   text-align: center;
+  font-size: 2rem;
 }
 
 #no-compounds {
@@ -369,11 +385,13 @@ nav ul li a {
 .no-compounds-header {
   color: mediumblue;
   text-align: center;
+  font-size: 2rem;
 }
 
 .no-compounds-text {
   text-align: center;
   overflow-wrap: break-word;
+  font-size: 1.2rem;
 }
 
 #no-compounds-button {
@@ -393,16 +411,19 @@ nav ul li a {
 .excercise-error-header {
   color: mediumblue;
   text-align: center;
+  font-size: 2rem;
 }
 
 .excercise-error-text {
   text-align: center;
   overflow-wrap: break-word;
+  font-size: 1.2rem;
 }
 
 .trying-to-reconnect {
   color: mediumblue;
   text-align: center;
+  font-size: 1.5rem;
 }
 
 .task-label {
@@ -423,26 +444,23 @@ nav ul li a {
   font-size: 2rem;
   border-radius: 999px;
   padding-left: 20px;
+  padding-right: 20px;
   padding-top: 7.5px;
   padding-bottom: 7.5px;
   margin: 30px;
-  width: 50%;
-  max-width: 800px;
-  min-width: 400px;
+  width: 85%;
+  max-width: 700px;
+  min-width: 200px;
+}
+
+.excercise-entry:focus {
+  outline: solid 2px lightskyblue;
 }
 
 .excercise-entry:disabled {
   background-color: white;
   border-color: black;
   color: black;
-}
-
-#excercise-entry-true {
-  border-color: black;
-}
-
-#excercise-entry-false {
-  border-color: red;
 }
 
 #excercise-buttons {
@@ -515,6 +533,24 @@ nav ul li a {
   margin-left: 4px;
   color: black;
 }
+
+/* not found style */
+
+#not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.not-found-header {
+  color: mediumblue;
+  font-size: 2rem;
+}
+
+.not-found-text {
+  font-size: 1.5rem;
+}
+
 /* footer style */
 
 footer {
@@ -590,6 +626,21 @@ footer {
     padding-right: 20px;
     margin: 16px;
   }
+
+  .task-label {
+    font-size: 1rem;
+    margin: 8px;
+  }
+
+  .task {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+  }
+
+  .excercise-entry {
+    margin-left: 4px;
+    margin-right: 4px;
+  }
 }
 
 @media (max-width: 400px) {
@@ -600,6 +651,10 @@ footer {
   input[type="checkbox"] {
     width: 18px;
     height: 18px;
+  }
+
+  .excercise-entry {
+    font-size: 1.5rem;
   }
 }
 

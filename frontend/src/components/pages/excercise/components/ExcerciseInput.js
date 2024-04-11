@@ -9,20 +9,19 @@ function ExcerciseInput({
   handleEnter,
   wrongAnimation,
   compounds,
-  VZORCE,
+  VZOREC,
   EXCERCISE_TYPE,
 }) {
   return (
     <>
       <animated.input
-        id={wrong ? "excercise-entry-true" : "excercise-entry-true"}
         className="excercise-entry"
         placeholder={`Zadejte ${EXCERCISE_TYPE}...`}
         autoFocus
         disabled={dontKnow ? true : false}
         value={
           dontKnow
-            ? EXCERCISE_TYPE === VZORCE
+            ? EXCERCISE_TYPE === VZOREC
               ? compounds[1]?.name
               : "lol"
             : answer

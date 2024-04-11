@@ -6,9 +6,12 @@ import SetupAllSome from "./components/SetupAllSome";
 import SetupCard from "./components/SetupCard";
 
 function ExcerciseSetup() {
+  const excerciseTypeStorage = localStorage.getItem("EXCERCISE_TYPE");
   const groupsList = JSON.parse(localStorage.getItem("WANTED_GROUPS"));
   const elementsList = JSON.parse(localStorage.getItem("WANTED_ELEMENTS"));
-  const [excerciseType, setExcerciseType] = useState("vzorce");
+  const [excerciseType, setExcerciseType] = useState(
+    excerciseTypeStorage ? excerciseTypeStorage : "vzorec"
+  );
   const [allGroups, setAllGroups] = useState(
     groupsList ? groupsList.length === groups.length : true
   );
@@ -35,10 +38,10 @@ function ExcerciseSetup() {
 
   // Function to handle the change of excercise type
   const handleExcerciseTypeChange = () => {
-    if (excerciseType === "vzorce") {
-      setExcerciseType("nazvy");
+    if (excerciseType === "vzorec") {
+      setExcerciseType("název");
     } else {
-      setExcerciseType("vzorce");
+      setExcerciseType("vzorec");
     }
   };
 
@@ -51,6 +54,7 @@ function ExcerciseSetup() {
   useEffect(() => {
     if (allGroups) {
       setGroupsSet(new Set(groups.map((item) => item.name)));
+      localStorage.setItem("WANTED_GROUPS", JSON.stringify([]));
     } else {
       if (groupsList) {
         setGroupsSet(new Set(groupsList));
@@ -69,6 +73,7 @@ function ExcerciseSetup() {
   useEffect(() => {
     if (allElements) {
       setElementsSet(new Set(elements.map((item) => item.name)));
+      localStorage.setItem("WANTED_ELEMENTS", JSON.stringify([]));
     } else {
       if (elementsList) {
         setElementsSet(new Set(elementsList));
