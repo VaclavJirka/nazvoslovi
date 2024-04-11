@@ -22,22 +22,14 @@ input[type="radio"] {
   transform: scale(1.2);
 }
 
-#main {
+#root {
   position: fixed;
   width: 100%;
   height: 100%;
   left: 0;
   top: 0;
-  font-family: "Montserrat", sans-serif;
-}
-
-#app {
-  position: fixed;
-  width: 100%;
   min-width: 270px;
-  height: 100%;
-  left: 0;
-  top: 0;
+  font-family: "Montserrat", sans-serif;
   font-size: 20px;
   overflow: scroll;
   background: linear-gradient(0deg, lightsteelblue 0%, aliceblue 100%);

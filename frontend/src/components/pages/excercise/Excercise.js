@@ -124,11 +124,7 @@ function Excercise() {
           <div className="content" id="excercise">
             <h4 className="task-label">Zadejte:</h4>
             <h2 className="task">
-              {
-                EXCERCISE_TYPE === VZOREC
-                  ? "lol"
-                  : compounds[0]?.name /*podívat se na to číslo */
-              }
+              {EXCERCISE_TYPE === VZOREC ? "lol" : compounds[0]?.name}
             </h2>
             <ExcerciseInput
               wrong={wrong}
