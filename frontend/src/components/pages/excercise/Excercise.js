@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useCallback } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import fetchCompounds from "../../api/api";
 import { useSpring } from "@react-spring/web";
 import NoCompounds from "./components/NoCompounds";
@@ -66,7 +67,7 @@ function Excercise() {
         // tady vylepšit chybové hlášení
       }
     }
-  }, [compounds, wantedGroups, wantedElements]);
+  }, [compounds, wantedGroups, wantedElements, usedIds]);
 
   // fetch data on the first render and theb every time the compounds array changes
   useEffect(() => {
@@ -90,7 +91,6 @@ function Excercise() {
   const handleCheck = () => {
     if (dontKnow) {
       setDontKnow(false);
-      setAnswer("");
     } else {
       if (EXCERCISE_TYPE === VZOREC) {
         if (compounds[1].name === answer) {
@@ -109,6 +109,7 @@ function Excercise() {
       }
     }
     setCompounds(compounds.slice(1));
+    setAnswer("");
   };
 
   // handle the dont know button
@@ -119,6 +120,9 @@ function Excercise() {
 
   return (
     <>
+      <Helmet>
+        <title>Procvičování</title>
+      </Helmet>
       {!error ? (
         compounds.length > 0 ? (
           <div className="content" id="excercise">

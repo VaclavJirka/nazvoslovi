@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 import HomePage from "./pages/HomePage";
 import NavBar from "./utils/NavBar";
 import ExcerciseSetup from "./pages/excerciseSetup/ExcerciseSetup";
@@ -9,19 +10,23 @@ import NotFound from "./pages/NotFound";
 import Footer from "./utils/Footer";
 
 function App() {
+  const helmetContext = {};
+
   return (
     <>
-      <Router>
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/procvicovani" element={<ExcerciseSetup />} />
-          <Route path="/procvicovani/zacit" element={<Excercise />} />
-          <Route path="/oprojektu" element={<About />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-        <Footer />
-      </Router>
+      <HelmetProvider context={helmetContext}>
+        <Router>
+          <NavBar />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/procvicovani" element={<ExcerciseSetup />} />
+            <Route path="/procvicovani/zacit" element={<Excercise />} />
+            <Route path="/oprojektu" element={<About />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+          <Footer />
+        </Router>
+      </HelmetProvider>
     </>
   );
 }

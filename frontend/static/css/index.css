@@ -546,6 +546,7 @@ nav ul li a {
 /* footer style */
 
 footer {
+  z-index: 0;
   text-align: center;
   padding: 8px;
 }

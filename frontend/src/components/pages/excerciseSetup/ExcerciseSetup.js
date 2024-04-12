@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { elements, groups } from "../../data";
+import { Helmet } from "react-helmet-async";
+import { elements, groups } from "../../jsondata/data";
 import { useNavigate } from "react-router-dom";
 import SetupType from "./components/SetupType";
 import SetupAllSome from "./components/SetupAllSome";
@@ -143,64 +144,69 @@ function ExcerciseSetup() {
   };
 
   return (
-    <form className="content" id="excercise-setup-form" onSubmit={onSubmit}>
-      <h2 className="excercise-setup-header">Nastavení procvičování</h2>
-      <SetupType
-        excerciseType={excerciseType}
-        handleExcerciseTypeChange={handleExcerciseTypeChange}
-      />
-      <div className="setup-div">
-        <fieldset className="main-setup-field-set">
-          <SetupAllSome
-            elType="groups"
-            allState={allGroups}
-            handleChange={handleAllGroupsChange}
-            title="skupiny"
-            id="3"
-          />
-          <SetupCard
-            allState={allGroups}
-            error={groupsError}
-            handleAllChange={handleAllGroupsChange}
-            elType="groups"
-            setSearch={setGroupSearch}
-            typeSearch={groupSearch}
-            dataType={groups}
-            typeSet={groupsSet}
-            deleteSelected={deleteSelected}
-            handleTypeChange={handleGroupChange}
-          />
-        </fieldset>
-        <fieldset className="main-setup-field-set">
-          <SetupAllSome
-            elType="elements"
-            allState={allElements}
-            handleChange={handleAllElementsChange}
-            title="prvky"
-            id="5"
-          />
-          <SetupCard
-            allState={allElements}
-            error={elementsError}
-            handleAllChange={handleAllElementsChange}
-            elType="elements"
-            setSearch={setElementSearch}
-            typeSearch={elementSearch}
-            dataType={elements}
-            typeSet={elementsSet}
-            deleteSelected={deleteSelected}
-            handleTypeChange={handleElementChange}
-          />
-        </fieldset>
-      </div>
-      <button
-        className="blue-glow-button"
-        id="excercise-start-button"
-        type="submit"
-      >
-        Začít
-      </button>
-    </form>
+    <>
+      <Helmet>
+        <title>Nastavení procvičování</title>
+      </Helmet>
+      <form className="content" id="excercise-setup-form" onSubmit={onSubmit}>
+        <h2 className="excercise-setup-header">Nastavení procvičování</h2>
+        <SetupType
+          excerciseType={excerciseType}
+          handleExcerciseTypeChange={handleExcerciseTypeChange}
+        />
+        <div className="setup-div">
+          <fieldset className="main-setup-field-set">
+            <SetupAllSome
+              elType="groups"
+              allState={allGroups}
+              handleChange={handleAllGroupsChange}
+              title="skupiny"
+              id="3"
+            />
+            <SetupCard
+              allState={allGroups}
+              error={groupsError}
+              handleAllChange={handleAllGroupsChange}
+              elType="groups"
+              setSearch={setGroupSearch}
+              typeSearch={groupSearch}
+              dataType={groups}
+              typeSet={groupsSet}
+              deleteSelected={deleteSelected}
+              handleTypeChange={handleGroupChange}
+            />
+          </fieldset>
+          <fieldset className="main-setup-field-set">
+            <SetupAllSome
+              elType="elements"
+              allState={allElements}
+              handleChange={handleAllElementsChange}
+              title="prvky"
+              id="5"
+            />
+            <SetupCard
+              allState={allElements}
+              error={elementsError}
+              handleAllChange={handleAllElementsChange}
+              elType="elements"
+              setSearch={setElementSearch}
+              typeSearch={elementSearch}
+              dataType={elements}
+              typeSet={elementsSet}
+              deleteSelected={deleteSelected}
+              handleTypeChange={handleElementChange}
+            />
+          </fieldset>
+        </div>
+        <button
+          className="blue-glow-button"
+          id="excercise-start-button"
+          type="submit"
+        >
+          Začít
+        </button>
+      </form>
+    </>
   );
 }
 

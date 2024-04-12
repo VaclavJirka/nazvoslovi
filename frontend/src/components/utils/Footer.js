@@ -3,7 +3,7 @@ import React from "react";
 function Footer() {
   return (
     <footer>
-      <h5 className="footer-title">©2024 Václav Jirka</h5>
+      <h5 className="footer-title">Václav Jirka 2024</h5>
     </footer>
   );
 }
