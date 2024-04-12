@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useCallback } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
 import fetchCompounds from "../../api/api";
 import { useSpring } from "@react-spring/web";
+import StandardHelmetTemplate from "../../helmet_templates/StandardHelmetTemplate";
 import NoCompounds from "./components/NoCompounds";
 import ExcerciseError from "./components/ExcerciseError";
 import ExcerciseInput from "./components/ExcerciseInput";
@@ -120,9 +120,10 @@ function Excercise() {
 
   return (
     <>
-      <Helmet>
-        <title>Procvičování</title>
-      </Helmet>
+      <StandardHelmetTemplate
+        title="Procvičování"
+        description="Procvičování chemických sloučenin a jejich názvů a vzorců."
+      />
       {!error ? (
         compounds.length > 0 ? (
           <div className="content" id="excercise">

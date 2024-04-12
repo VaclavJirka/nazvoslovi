@@ -1,12 +1,12 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
-import HomePage from "./pages/HomePage";
+import HomePage from "./pages/home/HomePage";
 import NavBar from "./utils/NavBar";
 import ExcerciseSetup from "./pages/excerciseSetup/ExcerciseSetup";
 import Excercise from "./pages/excercise/Excercise";
 import About from "./pages/about/About";
-import NotFound from "./pages/NotFound";
+import NotFound from "./pages/notfound/NotFound";
 import Footer from "./utils/Footer";
 
 function App() {

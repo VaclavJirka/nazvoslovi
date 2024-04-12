@@ -1,14 +1,12 @@
 import React from "react";
 import AboutCard from "./components/AboutCard";
 import OtherContributors from "./components/OtherContributors";
-import { Helmet } from "react-helmet-async";
+import StandardHelmetTemplate from "../../helmet_templates/StandardHelmetTemplate";
 
 function About() {
   return (
     <>
-      <Helmet>
-        <title>O projektu</title>
-      </Helmet>
+      <StandardHelmetTemplate title="O projektu" description="O projektu" />
       <div className="content" id="about">
         <AboutCard
           id="about-nazvoslovi"

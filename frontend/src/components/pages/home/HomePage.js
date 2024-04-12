@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
+import StandardHelmetTemplate from "../../helmet_templates/StandardHelmetTemplate";
 function HomePage() {
   return (
     <>
-      <Helmet>
-        <title>Názvosloví</title>
-      </Helmet>
+      <StandardHelmetTemplate
+        title="Názvosloví"
+        description="Procvič si názvosloví chemických prvků a sloučenin. Na této stránce si můžeš vybrat z hromady chemických prvků a sloučenin a procvičit si jejich názvy a vzorce. Staň se mistrem názvosloví!"
+      />
       <div className="content" id="home">
         <h1 className="home-header">Procvič si názvosloví</h1>
         <p className="home-paragraph">

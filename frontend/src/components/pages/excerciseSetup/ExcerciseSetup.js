@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Helmet } from "react-helmet-async";
 import { elements, groups } from "../../jsondata/data";
 import { useNavigate } from "react-router-dom";
 import SetupType from "./components/SetupType";
 import SetupAllSome from "./components/SetupAllSome";
 import SetupCard from "./components/SetupCard";
+import StandardHelmetTemplate from "../../helmet_templates/StandardHelmetTemplate";
 
 function ExcerciseSetup() {
   const excerciseTypeStorage = localStorage.getItem("EXCERCISE_TYPE");
@@ -145,9 +145,10 @@ function ExcerciseSetup() {
 
   return (
     <>
-      <Helmet>
-        <title>Nastavení procvičování</title>
-      </Helmet>
+      <StandardHelmetTemplate
+        title="Nastavení procvičování"
+        description="Nastavení procvičování chemických prvků a sloučenin a jejich názvů a sloučenin."
+      />
       <form className="content" id="excercise-setup-form" onSubmit={onSubmit}>
         <h2 className="excercise-setup-header">Nastavení procvičování</h2>
         <SetupType
