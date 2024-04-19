@@ -23,12 +23,11 @@ function NavBar() {
             >
               <div className="nav-logo-div">
                 <img
-                  src={"/static/images/beaker.png"}
-                  width="30"
-                  height="30"
+                  src={"/static/images/nazvoslovi_full_logo.png"}
+                  // width="50"
+                  // height="50"
                   className="nav-logo-img"
                 />
-                <h3 className="nav-logo-header">Názvosloví</h3>
               </div>
             </Link>
           </li>

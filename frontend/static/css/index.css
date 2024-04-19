@@ -88,6 +88,10 @@ nav ul li a {
   justify-content: space-between;
 }
 
+.nav-logo-img {
+  height: 50px;
+}
+
 .nav-logo-header {
   color: mediumblue;
   font-weight: 700;
