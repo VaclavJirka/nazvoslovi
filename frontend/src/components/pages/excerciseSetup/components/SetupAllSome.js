@@ -6,7 +6,7 @@ function SetupAllSome({ elType, allState, handleChange, title, id }) {
     <>
       <fieldset className="setup-all-some">
         <SetupRadioOption
-          divClass="setup-radio-form-option"
+          className="setup-radio-form-option"
           elName={`all-${elType}`}
           id={`setup-radio-form-option-${id}`}
           value={allState ? true : false}
@@ -15,7 +15,7 @@ function SetupAllSome({ elType, allState, handleChange, title, id }) {
           title={`Všechny ${title}`}
         ></SetupRadioOption>
         <SetupRadioOption
-          divClass="setup-radio-form-option"
+          className="setup-radio-form-option"
           elName={`some-${elType}`}
           id={`setup-radio-form-option-${Number(id) + 1}`}
           value={allState ? false : true}

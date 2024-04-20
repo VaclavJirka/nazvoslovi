@@ -161,50 +161,32 @@ function ExcerciseSetup() {
           excerciseType={excerciseType}
           handleExcerciseTypeChange={handleExcerciseTypeChange}
         />
-        <div className="setup-div">
-          <fieldset className="main-setup-field-set">
-            <SetupAllSome
-              elType="groups"
-              allState={allGroups}
-              handleChange={handleAllGroupsChange}
-              title="skupiny"
-              id="3"
-            />
-            <SetupCard
-              allState={allGroups}
-              error={groupsError}
-              handleAllChange={handleAllGroupsChange}
-              elType="groups"
-              setSearch={setGroupSearch}
-              typeSearch={groupSearch}
-              dataType={groups}
-              typeSet={groupsSet}
-              deleteSelected={deleteSelected}
-              handleTypeChange={handleGroupChange}
-            />
-          </fieldset>
-          <fieldset className="main-setup-field-set">
-            <SetupAllSome
-              elType="elements"
-              allState={allElements}
-              handleChange={handleAllElementsChange}
-              title="prvky"
-              id="5"
-            />
-            <SetupCard
-              allState={allElements}
-              error={elementsError}
-              handleAllChange={handleAllElementsChange}
-              elType="elements"
-              setSearch={setElementSearch}
-              typeSearch={elementSearch}
-              dataType={elements}
-              typeSet={elementsSet}
-              deleteSelected={deleteSelected}
-              handleTypeChange={handleElementChange}
-            />
-          </fieldset>
-        </div>
+        <fieldset className="setup-div">
+          <SetupCard
+            allState={allGroups}
+            error={groupsError}
+            handleAllChange={handleAllGroupsChange}
+            elType="groups"
+            setSearch={setGroupSearch}
+            typeSearch={groupSearch}
+            dataType={groups}
+            typeSet={groupsSet}
+            deleteSelected={deleteSelected}
+            handleTypeChange={handleGroupChange}
+          />
+          <SetupCard
+            allState={allElements}
+            error={elementsError}
+            handleAllChange={handleAllElementsChange}
+            elType="elements"
+            setSearch={setElementSearch}
+            typeSearch={elementSearch}
+            dataType={elements}
+            typeSet={elementsSet}
+            deleteSelected={deleteSelected}
+            handleTypeChange={handleElementChange}
+          />
+        </fieldset>
         <button
           className="blue-glow-button"
           id="excercise-start-button"

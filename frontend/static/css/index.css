@@ -170,13 +170,14 @@ nav ul li a {
 /* setup utils */
 
 .setup-radio-form-option {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin: 6px;
   padding: 6px;
 }
 
 .radio-button-label {
   font-weight: 600;
+  font-size: 1rem;
   margin-left: 4px;
 }
 
@@ -215,19 +216,6 @@ nav ul li a {
   justify-content: space-between;
 }
 
-.main-setup-field-set {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 4px;
-  margin-bottom: 32px;
-  margin-left: 12px;
-  margin-right: 12px;
-  padding-top: 0px;
-  padding-left: 8px;
-  padding-right: 8px;
-}
-
 .setup-all-some {
   display: flex;
   flex-direction: column;
@@ -244,7 +232,7 @@ nav ul li a {
   border-radius: 24px;
   margin: 8px;
   padding: 16px;
-  height: 325px;
+  height: 450px;
   width: 275px;
 }
 
@@ -262,6 +250,20 @@ nav ul li a {
   margin-right: 8px;
 }
 
+.setup-card-subtitle {
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-top: 8px;
+  margin-bottom: 4px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.setup-card-list-container {
+  padding: 0px;
+}
+
 .setup-card-search-box {
   border-radius: 999px;
   border-color: black;
@@ -271,7 +273,7 @@ nav ul li a {
   padding-right: 12px;
   font-size: 1rem;
   margin-bottom: 8px;
-  margin-top: 6px;
+  margin-top: 4px;
   width: 80%;
 }
 
@@ -311,7 +313,7 @@ nav ul li a {
 }
 
 .setup-card-items-list.setup-card-items-list-error {
-  max-height: 178px;
+  max-height: 170px;
 }
 
 .setup-card-item-row {
@@ -332,7 +334,7 @@ nav ul li a {
 
 .fa-solid.fa-arrow-down {
   position: absolute;
-  top: 85%; /* adjust as needed */
+  top: 90%; /* adjust as needed */
   left: 50%; /* adjust as needed */
   z-index: 1;
 }
@@ -570,9 +572,10 @@ footer {
 
   .setup-div {
     flex-direction: column;
+    align-items: center;
   }
 
-  .main-setup-field-set {
+  .setup-card {
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 0px;
@@ -659,7 +662,7 @@ footer {
   }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 335px) {
   #excercise-setup-form {
     padding-left: 8px;
     padding-right: 8px;
