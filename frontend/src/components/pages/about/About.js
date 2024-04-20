@@ -6,13 +6,16 @@ import StandardHelmetTemplate from "../../helmet_templates/StandardHelmetTemplat
 function About() {
   return (
     <>
-      <StandardHelmetTemplate title="O projektu" description="O projektu" />
+      <StandardHelmetTemplate
+        title="O projektu"
+        description="O projektu a autorech nazvoslovi.eu"
+      />
       <div className="content" id="about">
         <AboutCard
           id="about-nazvoslovi"
           header={"nazvoslovi.eu"}
           text={
-            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam sapien elit, consequat eget, tristique non, venenatis quis, ante. Nunc tincidunt ante vitae massa. Integer malesuada. Excepteur sint occaecat cupidatat non proident."
+            "nazvoslovi.eu je webová aplikace, která slouží k procvičování chemických názvů a vzorců. Byla vytvořena, protože autor na internetu nenašel žádnou stránku, která by mu na procvičování úplně vyhovovala. Proto vytvořil tuto, přesně podle jeho představ. Také slouží k procvičení znalostí programování a tvoření webových stránek."
           }
           socials={[
             {
@@ -22,11 +25,19 @@ function About() {
             },
           ]}
         />
+        <div className="about-card">
+          <h2 className="about-header">Kontakt</h2>
+          <ul>
+            <li>
+              Email: <a href="mailto:info@nazvoslovi.eu">info@nazvoslovi.eu</a>
+            </li>
+          </ul>
+        </div>
         <AboutCard
           id="about-vaclav-jirka"
           header={"Václav Jirka"}
           text={
-            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam sapien elit, consequat eget, tristique non, venenatis quis, ante. Nunc tincidunt ante vitae massa. Integer malesuada. Excepteur sint occaecat cupidatat non proident."
+            "Autor tohoto projektu. Student na Gymnáziu Josefa Ressla v Chrudimi a také Power Platform AG student v Studentském trenérském centru. Zajímá se o programování, letecké modelářství a rád cestuje vlakem."
           }
           socials={[
             {

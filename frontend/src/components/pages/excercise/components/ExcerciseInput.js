@@ -19,7 +19,9 @@ function ExcerciseInput({
       <animated.input
         className="excercise-entry"
         name="answer"
-        placeholder={`Zadejte ${EXCERCISE_TYPE}...`}
+        placeholder={`Zadejte ${
+          EXCERCISE_TYPE === VZOREC ? "název" : "značku"
+        }...`}
         autoFocus
         disabled={dontKnow ? true : false}
         value={

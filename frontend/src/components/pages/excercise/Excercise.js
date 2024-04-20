@@ -213,7 +213,9 @@ function Excercise() {
       {!error ? (
         compounds.length > 0 ? (
           <div className="content" id="excercise">
-            <h4 className="task-label">Zadejte:</h4>
+            <h4 className="task-label">
+              {`Zadejte ${EXCERCISE_TYPE === VZOREC ? "název" : "značku"}:`}
+            </h4>
             <h2 className="task">
               {EXCERCISE_TYPE === VZOREC
                 ? convertToFormula(getFirstOption(compounds[0]?.formula))

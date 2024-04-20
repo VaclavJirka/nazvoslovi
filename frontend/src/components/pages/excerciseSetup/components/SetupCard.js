@@ -97,11 +97,8 @@ function SetupCard({
                 </li>
               ))}
           </ul>
-          <animated.i
-            className="fa-solid fa-arrow-down"
-            style={fade}
-          ></animated.i>
         </fieldset>
+        <animated.i className="fa-solid fa-arrow-down" style={fade} />
       </fieldset>
     </>
   );

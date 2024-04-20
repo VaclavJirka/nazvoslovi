@@ -10,8 +10,8 @@ function OtherContributors() {
             <strong className="other-contributors-item-header">
               Ondřej Havlík&nbsp;
             </strong>
-            - český student na gymnáziu v Chrudimi. Pomáhá s vědomostní stránkou
-            projektu...
+            - Student na gymnáziu Josefa Ressela. Významně pomohl k vytvoření
+            databáze sloučenin.
             <a
               className="other-contributors-item-link"
               href="https://www.google.com/"

@@ -207,7 +207,7 @@ nav ul li a {
 }
 
 .setup-div {
-  width: 100%;
+  width: 90%;
   text-align: center;
   max-width: 850px;
   min-width: 230px;
@@ -232,7 +232,7 @@ nav ul li a {
   border-radius: 24px;
   margin: 8px;
   padding: 16px;
-  height: 450px;
+  height: 440px;
   width: 275px;
 }
 
@@ -308,7 +308,7 @@ nav ul li a {
   margin-top: 0px;
   margin-bottom: 0px;
   overflow-y: scroll;
-  max-height: 210px;
+  max-height: 215px;
   padding: 8px;
 }
 
