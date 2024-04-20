@@ -21,14 +21,10 @@ function NavBar() {
                 isOpen ? !setOpen(false) : null;
               }}
             >
-              <div className="nav-logo-div">
-                <img
-                  src={"/static/images/nazvoslovi_full_logo.png"}
-                  // width="50"
-                  // height="50"
-                  className="nav-logo-img"
-                />
-              </div>
+              <img
+                src={"/static/images/nazvoslovi_full_logo.png"}
+                className="nav-logo-img"
+              />
             </Link>
           </li>
           <li className="nav-list-item" id="nav-item-practice">

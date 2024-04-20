@@ -81,24 +81,16 @@ nav ul li a {
   font-size: 1.3rem;
 }
 
-.nav-logo-div {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+#nav-item-logo {
+  margin-right: 4px;
+  margin-left: 16px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  padding: 0px;
 }
 
 .nav-logo-img {
   height: 50px;
-}
-
-.nav-logo-header {
-  color: mediumblue;
-  font-weight: 700;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  margin-right: 0px;
-  margin-left: 16px;
 }
 
 #nav-item-hamburger {
@@ -598,8 +590,17 @@ footer {
   .nav-list {
     justify-content: space-between;
   }
+
   .nav-list-item:not(#nav-item-logo, #nav-item-hamburger) {
     display: none;
+  }
+
+  #nav-item-logo {
+    margin-left: 4px;
+  }
+
+  .nav-logo-img {
+    height: 46px;
   }
 
   .home-header {
