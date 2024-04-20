@@ -88,7 +88,7 @@ function Excercise() {
           setAvailableCompounds(0);
         } else {
           setCompounds([...compounds, ...response.data.data]);
-          setAvailableCompounds(response.data.count);
+          setAvailableCompounds(response.data.count - 10);
         }
       } catch (err) {
         setError([true, err.message]);
