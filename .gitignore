@@ -1,6 +1,6 @@
 .env
 nazvoslovi.sqlite3
-import_data
+compounds_data
 *.log
 *.pot
 *.pyc
