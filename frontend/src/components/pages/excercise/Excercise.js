@@ -15,7 +15,7 @@ function Excercise() {
   const VZOREC = "vzorec";
   const { EXCERCISE_TYPE, wantedGroups, wantedElements } = location.state || {};
   const [compounds, setCompounds] = useState([]);
-  const [availableCompounds, setAvailableCompounds] = useState(null);
+  const [availableCompounds, setAvailableCompounds] = useState(0);
   const [usedIds, setUsedIds] = useState([]);
   const [error, setError] = useState(null);
   const [answer, setAnswer] = useState(null);
@@ -125,10 +125,9 @@ function Excercise() {
 
   // fetch data on the first render and theb every time the compounds array changes
   useEffect(() => {
-    // if (availableCompounds < 1) {
-    //   setUsedIds([]);
-    // }
-    getCompounds();
+    if (availableCompounds > 0 || compounds.length === 0) {
+      getCompounds();
+    }
   }, [compounds]);
 
   // handle the answer input
@@ -162,7 +161,6 @@ function Excercise() {
           }${actualAnswer.slice(i + 1)}`;
         }
       }
-      console.log(actualAnswer);
 
       if (EXCERCISE_TYPE === VZOREC) {
         let splittedCompounds = compounds[0].name.split(",");
@@ -189,6 +187,9 @@ function Excercise() {
           setWrong(true);
         }
       }
+    }
+    if (availableCompounds < 11) {
+      setUsedIds([]);
     }
     setAnswer("");
   };
