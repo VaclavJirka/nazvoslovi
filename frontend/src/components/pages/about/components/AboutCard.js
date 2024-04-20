@@ -9,7 +9,7 @@ function AboutCard({ id, header, text, socials }) {
         {socials.map((social) => (
           <a
             href={social.link}
-            key={social.icon}
+            key={social.key}
             target="_blank"
             rel="noopener noreferrer"
             aria-label={social.ariaLabel}

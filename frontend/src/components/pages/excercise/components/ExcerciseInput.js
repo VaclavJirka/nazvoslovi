@@ -20,7 +20,7 @@ function ExcerciseInput({
         className="excercise-entry"
         name="answer"
         placeholder={`Zadejte ${
-          EXCERCISE_TYPE === VZOREC ? "název" : "značku"
+          EXCERCISE_TYPE === VZOREC ? "název" : "vzorec"
         }...`}
         autoFocus
         disabled={dontKnow ? true : false}

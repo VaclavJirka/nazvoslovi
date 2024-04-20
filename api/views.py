@@ -37,7 +37,9 @@ class RequestCompoundsView(views.APIView):
                 return Response(context, status=status.HTTP_400_BAD_REQUEST)
 
             # Make a query and filter it out the database
-            query = ~Q(id__in=used_ids) & Q(group__in=groups) & Q(elements__in=elements)
+            query = (
+                ~Q(id__in=used_ids) & Q(group__in=groups) & ~Q(elements__in=elements)
+            )
             samples = (
                 Compound.objects.filter(query)
                 .order_by("?")[:requested_count]

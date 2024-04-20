@@ -214,7 +214,7 @@ function Excercise() {
         compounds.length > 0 ? (
           <div className="content" id="excercise">
             <h4 className="task-label">
-              {`Zadejte ${EXCERCISE_TYPE === VZOREC ? "název" : "značku"}:`}
+              {`Zadejte ${EXCERCISE_TYPE === VZOREC ? "název" : "vzorec"}:`}
             </h4>
             <h2 className="task">
               {EXCERCISE_TYPE === VZOREC

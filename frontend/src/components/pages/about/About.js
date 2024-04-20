@@ -19,6 +19,7 @@ function About() {
           }
           socials={[
             {
+              key: "github-nazvoslovi",
               link: "https://github.com/VaclavJirka",
               icon: "fa-brands fa-github",
               ariaLabel: "GitHub projektu",
@@ -28,7 +29,7 @@ function About() {
         <div className="about-card">
           <h2 className="about-header">Kontakt</h2>
           <ul>
-            <li>
+            <li key="email-kontakt">
               Email: <a href="mailto:info@nazvoslovi.eu">info@nazvoslovi.eu</a>
             </li>
           </ul>
@@ -41,21 +42,25 @@ function About() {
           }
           socials={[
             {
+              key: "github-vaclav-jirka",
               link: "https://github.com/VaclavJirka",
               icon: "fa-brands fa-github",
               ariaLabel: "GitHub Václava Jirky",
             },
             {
+              key: "linkedin-vaclav-jirka",
               link: "https://linkedin.com/in/vaclavjirka/",
               icon: "fa-brands fa-linkedin",
               ariaLabel: "LinkedIn Václava Jirky",
             },
             {
+              key: "x-vaclav-jirka",
               link: "https://linkedin.com/in/vaclavjirka/",
               icon: "fa-brands fa-x-twitter",
               ariaLabel: "X Václava Jirky",
             },
             {
+              key: "instagram-vaclav-jirka",
               link: "https://linkedin.com/in/vaclavjirka/",
               icon: "fa-brands fa-instagram",
               ariaLabel: "Instagram Václava Jirky",

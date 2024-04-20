@@ -10,17 +10,27 @@ function OtherContributors() {
             <strong className="other-contributors-item-header">
               Ondřej Havlík&nbsp;
             </strong>
-            - Student na gymnáziu Josefa Ressela. Významně pomohl k vytvoření
+            - Student na Gymnáziu Josefa Ressela. Významně pomohl k vytvoření
             databáze sloučenin.
             <a
               className="other-contributors-item-link"
               href="https://www.google.com/"
-              key="nope"
+              key="x-ondrej-havlik"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="X Ondřeje Havlíka"
             >
               <i className="fa-brands fa-x-twitter"></i>
+            </a>
+            <a
+              className="other-contributors-item-link"
+              href="https://www.google.com/"
+              key="instagram-ondrej-havlik"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram Ondřeje Havlíka"
+            >
+              <i className="fa-brands fa-instagram"></i>
             </a>
           </p>
         </li>
