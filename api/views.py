@@ -44,7 +44,7 @@ class RequestCompoundsView(views.APIView):
                 .select_related("group")
             )
 
-            count = Compound.objects.filter(query).count()
+            count = Compound.objects.filter(query).distinct().count()
 
             # Check if the wanted conditions are correct
             if count == 0:
