@@ -84,8 +84,12 @@ function Excercise() {
           wantedElements
         );
         setError(null);
-        setCompounds([...compounds, ...response.data.data]);
-        setAvailableCompounds(response.data.count);
+        if (response.status === 204) {
+          setAvailableCompounds(0);
+        } else {
+          setCompounds([...compounds, ...response.data.data]);
+          setAvailableCompounds(response.data.count);
+        }
       } catch (err) {
         setError([true, err.message]);
         setTimeout(() => {
