@@ -11,3 +11,4 @@ logs
 **/*.backup.*
 **/*.back.*
 frontend/static/frontend/
+frontend/staticfiles/

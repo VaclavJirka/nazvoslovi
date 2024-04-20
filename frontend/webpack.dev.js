@@ -1,30 +1,14 @@
-const path = require("path");
+const { merge } = require("webpack-merge");
+const common = require("./webpack.common.js");
 const webpack = require("webpack");
+const path = require("path");
 
-module.exports = {
-  entry: "./src/index.js",
-
+module.exports = merge(common, {
   output: {
     path: path.resolve(__dirname, "./static/frontend"),
     filename: "[name].js",
   },
-
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: "babel-loader",
-        },
-      },
-    ],
-  },
-
-  optimization: {
-    minimize: true,
-  },
-
+  mode: "development",
   plugins: [
     new webpack.DefinePlugin({
       "process.env": {
@@ -33,6 +17,5 @@ module.exports = {
       },
     }),
   ],
-
   devtool: "source-map",
-};
+});
