@@ -261,7 +261,7 @@ export const elements = [
   },
   {
     id: 53,
-    formula: "In",
+    formula: "I",
     name: "jod",
   },
   {
@@ -610,19 +610,19 @@ export const groups = [
   },
   {
     id: 5,
-    name: "Halogenidy",
-  },
-  {
-    id: 6,
     name: "Hydridy",
   },
   {
-    id: 7,
+    id: 6,
     name: "Karbidy",
   },
   {
+    id: 7,
+    name: "Kyanidy",
+  },
+  {
     id: 8,
-    name: "Acetilidy",
+    name: "Acetylidy",
   },
   {
     id: 9,
@@ -670,62 +670,66 @@ export const groups = [
   },
   {
     id: 20,
-    name: "Bezkyslíkaté kyseliny",
+    name: "Podvojné  hydroxidy",
   },
   {
     id: 21,
-    name: "Kyslíkaté kyseliny",
+    name: "Bezkyslíkaté kyseliny",
   },
   {
     id: 22,
-    name: "Isopolykyseliny",
+    name: "Kyslíkaté kyseliny",
   },
   {
     id: 23,
-    name: "Peroxokyseliny",
+    name: "Isopolykyseliny",
   },
   {
     id: 24,
-    name: "Thiokyseliny",
+    name: "Peroxokyseliny",
   },
   {
     id: 25,
-    name: "Halogenkyseliny",
+    name: "Thiokyseliny",
   },
   {
     id: 26,
-    name: "Amidokyseliny",
+    name: "Halogenkyseliny",
   },
   {
     id: 27,
-    name: "Soli bezkyslíkatých kyselin",
+    name: "Amidokyseliny",
   },
   {
     id: 28,
-    name: "Soli kyslíkatých kyselin",
+    name: "Halogenidy",
   },
   {
     id: 29,
-    name: "Thiosoli",
+    name: "Ostatní soli bezkyslíkatých kyselin",
   },
   {
     id: 30,
-    name: "Podvojné soli",
+    name: "Soli kyslíkatých kyselin",
   },
   {
     id: 31,
-    name: "Zásadité soli",
+    name: "Thiosoli",
   },
   {
     id: 32,
-    name: "Hydráty",
+    name: "Podvojné soli",
   },
   {
     id: 33,
-    name: "Kyanidy",
+    name: "Zásadité soli",
   },
   {
     id: 34,
+    name: "Hydráty",
+  },
+  {
+    id: 35,
     name: "Komplexy",
   },
 ];

@@ -44,7 +44,7 @@ class RequestCompoundsView(views.APIView):
                 .select_related("group")
             )
 
-            count = Compound.objects.filter(query).count() - requested_count
+            count = Compound.objects.filter(query).count()
 
             # Check if the wanted conditions are correct
             if count == 0:
@@ -54,6 +54,7 @@ class RequestCompoundsView(views.APIView):
             # Return the results
             serializer = SendCompoundsSerializer(samples, many=True)
             context = {"data": serializer.data, "count": count}
+            print(context)
             return Response(context, status=status.HTTP_200_OK)
 
         # If there is a problem, return bad request

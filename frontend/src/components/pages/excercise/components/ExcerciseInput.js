@@ -11,19 +11,22 @@ function ExcerciseInput({
   compounds,
   VZOREC,
   EXCERCISE_TYPE,
+  convertToFormula,
+  getFirstOption,
 }) {
   return (
     <>
       <animated.input
         className="excercise-entry"
+        name="answer"
         placeholder={`Zadejte ${EXCERCISE_TYPE}...`}
         autoFocus
         disabled={dontKnow ? true : false}
         value={
           dontKnow
             ? EXCERCISE_TYPE === VZOREC
-              ? compounds[1]?.name
-              : "lol"
+              ? getFirstOption(compounds[0]?.name)
+              : convertToFormula(getFirstOption(compounds[0]?.formula))
             : answer
             ? answer
             : ""

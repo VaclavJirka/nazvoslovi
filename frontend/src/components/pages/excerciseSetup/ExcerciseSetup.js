@@ -48,6 +48,9 @@ function ExcerciseSetup() {
 
   // Function to handle the change the change of radio buttons to select all or some groups
   const handleAllGroupsChange = () => {
+    if (!allGroups && groupsError) {
+      setGroupsError(false);
+    }
     setAllGroups(!allGroups);
   };
 
@@ -67,6 +70,9 @@ function ExcerciseSetup() {
 
   // Function to handle the change the change of radio buttons to select all or some elements
   const handleAllElementsChange = () => {
+    if (!allElements && elementsError) {
+      setElementsError(false);
+    }
     setAllElements(!allElements);
   };
 
