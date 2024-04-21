@@ -54,9 +54,7 @@ function Excercise() {
     if (!location.state) {
       try {
         navigate("/nastaveni");
-      } catch (err) {
-        console.log(err);
-      }
+      } catch (err) {}
     }
   }, [location, navigate]);
 
