@@ -32,7 +32,7 @@ class RequestCompoundsView(views.APIView):
                 context = {"error": "Invalid group name"}
                 return Response(context, status=status.HTTP_400_BAD_REQUEST)
 
-            if elements.count() == 0:
+            if elements.count() == 118:
                 context = {"error": "Invalid element name"}
                 return Response(context, status=status.HTTP_400_BAD_REQUEST)
 
@@ -56,11 +56,9 @@ class RequestCompoundsView(views.APIView):
             # Return the results
             serializer = SendCompoundsSerializer(samples, many=True)
             context = {"data": serializer.data, "count": count}
-            print(context)
             return Response(context, status=status.HTTP_200_OK)
 
         # If there is a problem, return bad request
         else:
-            print(serializer.errors)
             context = {"error": "Invalid request data"}
             return Response(context, status=status.HTTP_400_BAD_REQUEST)
