@@ -53,7 +53,7 @@ function Excercise() {
   useEffect(() => {
     if (!location.state) {
       try {
-        navigate("/procvicovani");
+        navigate("/nastaveni");
       } catch (err) {
         console.log(err);
       }

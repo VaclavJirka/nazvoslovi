@@ -12,7 +12,7 @@ function NotFound() {
       <div className="content" id="not-found">
         <h2 className="not-found-header">Stránka nenalezena</h2>
         <p className="notfound-text">Bohužel, tuto stránku jsme nenašli...</p>
-        <Link to="/procvicovani">
+        <Link to="/nastaveni">
           <button className="blue-glow-button" id="go-to-practice">
             Procvičovat
           </button>

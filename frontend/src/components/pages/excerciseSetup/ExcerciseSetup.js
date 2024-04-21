@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { elements, groups } from "../../jsondata/data";
 import { useNavigate } from "react-router-dom";
 import SetupType from "./components/SetupType";
-import SetupAllSome from "./components/SetupAllSome";
 import SetupCard from "./components/SetupCard";
 import StandardHelmetTemplate from "../../helmet_templates/StandardHelmetTemplate";
 

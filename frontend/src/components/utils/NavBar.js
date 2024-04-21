@@ -28,7 +28,7 @@ function NavBar() {
             </Link>
           </li>
           <li className="nav-list-item" id="nav-item-practice">
-            <Link to="/procvicovani">Procvičování</Link>
+            <Link to="/nastaveni">Procvičování</Link>
           </li>
           <li className="nav-list-item" id="nav-item-about">
             <Link to="/oprojektu">O projektu</Link>
@@ -47,7 +47,7 @@ function NavBar() {
         <animated.div className="overlay-blur" style={overlayAppear}>
           <ul className="overlay-menu">
             <li className="overlay-menu-item">
-              <Link to="/procvicovani" onClick={() => setOpen(!isOpen)}>
+              <Link to="/nastaveni" onClick={() => setOpen(!isOpen)}>
                 Procvičování
               </Link>
             </li>

@@ -16,7 +16,7 @@ function HomePage() {
           více než 30 skupin a procvič si více než 1300 sloučenin. Staň se
           mistrem názvosloví! &#x1F9EA;
         </p>
-        <Link to="/procvicovani">
+        <Link to="/nastaveni">
           <button className="blue-glow-button" id="go-to-practice">
             Procvičovat
           </button>

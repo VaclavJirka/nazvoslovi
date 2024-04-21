@@ -6,7 +6,7 @@ function NoCompounds() {
 
   const handleBackButton = () => {
     try {
-      navigate("/procvicovani");
+      navigate("/nastaveni");
     } catch (err) {
       console.log(err);
     }

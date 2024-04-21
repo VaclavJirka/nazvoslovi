@@ -19,8 +19,8 @@ function App() {
           <NavBar />
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/procvicovani" element={<ExcerciseSetup />} />
-            <Route path="/procvicovani/zacit" element={<Excercise />} />
+            <Route path="/nastaveni" element={<ExcerciseSetup />} />
+            <Route path="/procvicovani" element={<Excercise />} />
             <Route path="/oprojektu" element={<About />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
