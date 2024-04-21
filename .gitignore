@@ -1,4 +1,5 @@
 .env
+nazvoslovi.sqlite3
 compounds_data
 *.log
 *.pot
@@ -9,3 +10,5 @@ node_modules
 logs
 **/*.backup.*
 **/*.back.*
+frontend/static/frontend/
+frontend/staticfiles/
