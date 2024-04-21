@@ -139,7 +139,7 @@ function ExcerciseSetup() {
     localStorage.setItem("EXCERCISE_TYPE", excerciseType);
     localStorage.setItem("WANTED_GROUPS", JSON.stringify(groupsList));
     localStorage.setItem("WANTED_ELEMENTS", JSON.stringify(elementsList));
-    navigate("/procvicovani/zacit", {
+    navigate("/procvicovani", {
       state: {
         EXCERCISE_TYPE: excerciseType,
         wantedGroups: groupsList,
@@ -152,7 +152,7 @@ function ExcerciseSetup() {
     <>
       <StandardHelmetTemplate
         title="Nastavení procvičování"
-        description="Nastavení procvičování chemických prvků a sloučenin a jejich názvů a sloučenin."
+        description="Nastavení procvičování názvů a vzorců chemických prvků a sloučenin."
       />
       <form className="content" id="excercise-setup-form" onSubmit={onSubmit}>
         <h2 className="excercise-setup-header">Nastavení procvičování</h2>

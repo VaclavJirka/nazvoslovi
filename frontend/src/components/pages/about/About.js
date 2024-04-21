@@ -20,7 +20,7 @@ function About() {
           socials={[
             {
               key: "github-nazvoslovi",
-              link: "https://github.com/VaclavJirka",
+              link: "https://github.com/VaclavJirka/nazvoslovi",
               icon: "fa-brands fa-github",
               ariaLabel: "GitHub projektu",
             },
@@ -55,13 +55,13 @@ function About() {
             },
             {
               key: "x-vaclav-jirka",
-              link: "https://linkedin.com/in/vaclavjirka/",
+              link: "https://twitter.com/vaclav_jirka",
               icon: "fa-brands fa-x-twitter",
               ariaLabel: "X Václava Jirky",
             },
             {
               key: "instagram-vaclav-jirka",
-              link: "https://linkedin.com/in/vaclavjirka/",
+              link: "https://www.instagram.com/vaclav.jirka/",
               icon: "fa-brands fa-instagram",
               ariaLabel: "Instagram Václava Jirky",
             },

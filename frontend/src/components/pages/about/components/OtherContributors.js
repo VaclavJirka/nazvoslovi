@@ -14,7 +14,7 @@ function OtherContributors() {
             databáze sloučenin.
             <a
               className="other-contributors-item-link"
-              href="https://www.google.com/"
+              href="https://twitter.com/cr_ondrej"
               key="x-ondrej-havlik"
               target="_blank"
               rel="noopener noreferrer"
@@ -24,7 +24,7 @@ function OtherContributors() {
             </a>
             <a
               className="other-contributors-item-link"
-              href="https://www.google.com/"
+              href="https://www.instagram.com/ondrejchrudim/"
               key="instagram-ondrej-havlik"
               target="_blank"
               rel="noopener noreferrer"
