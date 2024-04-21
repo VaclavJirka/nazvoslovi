@@ -18,7 +18,7 @@ function Excercise() {
   const [availableCompounds, setAvailableCompounds] = useState(0);
   const [usedIds, setUsedIds] = useState([]);
   const [error, setError] = useState(null);
-  const [answer, setAnswer] = useState(null);
+  const [answer, setAnswer] = useState("");
   const [wrong, setWrong] = useState(false);
   const [dontKnow, setDontKnow] = useState(false);
 
