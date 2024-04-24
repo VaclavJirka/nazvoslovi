@@ -555,7 +555,7 @@ footer {
 .footer-title {
   margin: 8px;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 
 @media (max-width: 830px) {
