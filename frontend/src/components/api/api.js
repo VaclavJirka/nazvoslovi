@@ -6,7 +6,7 @@ const fetchCompounds = async (count, usedIds, groups, elements) => {
   try {
     const response = await axios({
       method: "post",
-      url: "https://nazvoslovi.eu/api/practice",
+      url: "https://nazvoslovi.eu/api/practice", // http://127.0.0.1:8000/api/practice
       data: {
         count: count,
         used_ids: usedIds,

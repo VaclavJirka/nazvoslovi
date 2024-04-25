@@ -21,6 +21,7 @@ function Excercise() {
   const [answer, setAnswer] = useState("");
   const [wrong, setWrong] = useState(false);
   const [dontKnow, setDontKnow] = useState(false);
+  const [showIfTakesLonger, setShowIfTakesLonger] = useState(false);
 
   // prettier-ignore
   const numberToSubscript = {
@@ -57,6 +58,16 @@ function Excercise() {
       } catch (err) {}
     }
   }, [location, navigate]);
+
+  // show the loading screen if the data is not fetched in 1.5 seconds, or no compounds are available
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setShowIfTakesLonger(true);
+    }, 1000);
+    return () => {
+      clearTimeout(timeout);
+    };
+  }, []);
 
   // control for the animations
   const { wrongAnimation } = useSpring({
@@ -238,11 +249,13 @@ function Excercise() {
               dontKnow={dontKnow}
             />
           </div>
-        ) : availableCompounds == 0 ? (
-          <NoCompounds />
-        ) : (
-          <LoadingCompounds />
-        )
+        ) : showIfTakesLonger ? (
+          availableCompounds === 0 ? (
+            <NoCompounds />
+          ) : (
+            <LoadingCompounds />
+          )
+        ) : null
       ) : (
         <ExcerciseError error={error} />
       )}

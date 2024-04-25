@@ -15,7 +15,7 @@ function About() {
           id="about-nazvoslovi"
           header={"nazvoslovi.eu"}
           text={
-            "nazvoslovi.eu je webová aplikace, která slouží k procvičování chemických názvů a vzorců. Byla vytvořena, protože autor na internetu nenašel žádnou stránku, která by mu na procvičování úplně vyhovovala. Proto vytvořil tuto, přesně podle jeho představ. Také slouží k procvičení znalostí programování a tvoření webových stránek."
+            "nazvoslovi.eu je webová aplikace, která slouží k procvičování chemických názvů a vzorců. Byla vytvořena, protože autor na internetu nenašel žádnou stránku, která by mu na procvičování úplně vyhovovala. Proto vytvořil tuto, přesně podle jeho představ. Také slouží k procvičení znalostí programování a tvoření webových stránek. Její backend je vytvořen pomocí frameworku Django a frontend pomocí knihovny React."
           }
           socials={[
             {
