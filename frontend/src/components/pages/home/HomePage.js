@@ -5,7 +5,7 @@ function HomePage() {
   return (
     <>
       <StandardHelmetTemplate
-        title="Procvičuj názvosloví!"
+        title="Procvičování názvosloví"
         description="Procvičuj názvosloví chemických prvků a sloučenin. Na této stránce si můžeš vybrat z hromady chemických prvků a sloučenin a procvičit si jejich názvy a vzorce. Staň se mistrem názvosloví!"
       />
       <div className="content" id="home">
