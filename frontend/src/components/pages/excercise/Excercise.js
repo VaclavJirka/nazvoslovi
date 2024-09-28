@@ -180,7 +180,7 @@ function Excercise() {
         splittedCompounds = splittedCompounds.map((compound) =>
           compound.trim()
         );
-        if (splittedCompounds.includes(actualAnswer)) {
+        if (splittedCompounds.includes(actualAnswer.toLowerCase())) {
           setWrong(false);
           setUsedIds([...usedIds, compounds[0].id]);
           setCompounds(compounds.slice(1));
